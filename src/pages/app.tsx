@@ -1,7 +1,7 @@
 import { Router } from "@reach/router"
 import * as React from "react"
-import ArticlesPage from "../app/articles"
-import ArticlePage from "../app/article"
+import ArticlesPage from "../app/articles/articles"
+import ArticlePage from "../app/article/article"
 
 const App = () => {
   return (

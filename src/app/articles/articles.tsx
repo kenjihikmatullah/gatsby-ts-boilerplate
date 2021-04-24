@@ -3,7 +3,7 @@ import { RouteComponentProps } from "@reach/router"
 
 const ArticlesPage = (props: RouteComponentProps) => {
   return (
-    <div>This is articles page</div>
+    <div className={''}>This is articles page</div>
   )
 };
 
