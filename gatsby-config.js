@@ -3,6 +3,7 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    languages: ['id', 'en']
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,8 +34,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-i18n',
       options: {
-        langKeyDefault: 'en',
-        // useLangKeyLayout: true,
+        langKeyForNull: 'any',
+        langKeyDefault: ['id'],
+        useLangKeyLayout: true,
+        prefixDefault: true,
         // pagesPaths: ['/app/']
       }
     }
