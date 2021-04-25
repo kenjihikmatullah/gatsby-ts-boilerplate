@@ -1,16 +1,17 @@
 // If you don't want to use TypeScript you can delete this file!
 import * as React from "react"
 import { Link } from "gatsby"
-
-import Layout from "../components/layouts"
 import Seo from "../components/seo"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage, useIntl } from "react-intl"
 import messages from "../languages/messages/id"
+import withLayout from "../components/layouts/withLayout"
 
 const AboutPage = () => {
+  const intl = useIntl()
+
   return (
-    <Layout messages={messages}>
-      <Seo title="Menggunakan TypeScript" />
+    <>
+      <Seo title={`${intl.messages["about"]} Gatsby`} />
       <h1>
         <FormattedMessage
           id={"title"}
@@ -34,8 +35,11 @@ const AboutPage = () => {
         .
       </p>
       <Link to="/">Go back to the homepage</Link>
-    </Layout>
+    </>
   )
 }
 
-export default AboutPage
+export default withLayout({
+  Component: AboutPage,
+  messages: messages
+})
